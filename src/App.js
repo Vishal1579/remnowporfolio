@@ -6,6 +6,8 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import LayoutFixer from './components/LayoutFixer';
+import ScriptLoader from './components/ScriptLoader';
+import DOMScripts from './components/DOMScripts';
 
 import Home from './pages/Home';
 import About from './pages/About';
@@ -19,14 +21,21 @@ import Galleryapp from './pages/Galleryapp';
 
 function App() {
   useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-    });
+    // Initialize AOS after a small delay to ensure DOM is ready
+    const timer = setTimeout(() => {
+      AOS.init({
+        duration: 1000,
+        once: true,
+      });
+    }, 100);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
     <div className="App">
+      <ScriptLoader />
+      <DOMScripts />
       <LayoutFixer />
       <Header />
       <Routes>

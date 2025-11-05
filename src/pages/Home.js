@@ -41,7 +41,7 @@ function Home(){
         <div className="col-xl-3 col-lg-4 col-md-6">
           <div className="gallery-item h-100">
             <img
-              src="assets/img/gallery/springfield.png"
+              src={`${process.env.PUBLIC_URL}/assets/img/gallery/springfield.png`}
               className="img-fluid"
               alt=""
             />
@@ -67,7 +67,7 @@ function Home(){
         <div className="col-xl-3 col-lg-4 col-md-6">
           <div className="gallery-item h-100">
             <img
-              src="assets/img/gallery/culture.png"
+              src={`${process.env.PUBLIC_URL}/assets/img/gallery/culture.png`}
               className="img-fluid"
               alt=""
             />
@@ -83,7 +83,7 @@ function Home(){
         <div className="col-xl-3 col-lg-4 col-md-6">
           <div className="gallery-item ">
             <img
-              src="assets/img/gallery/kurinji.png"
+              src={`${process.env.PUBLIC_URL}/assets/img/gallery/kurinji.png`}
               className="img-fluid"
               alt=""
             />
@@ -99,7 +99,7 @@ function Home(){
         <div className="col-xl-3 col-lg-4 col-md-6">
           <div className="gallery-item h-100">
             <img
-              src="assets/img/gallery/TTK.png"
+              src={`${process.env.PUBLIC_URL}/assets/img/gallery/TTK.png`}
               className="img-fluid"
               alt=""
             />
@@ -115,7 +115,7 @@ function Home(){
         <div className="col-xl-3 col-lg-4 col-md-6">
           <div className="gallery-item h-100">
             <img
-              src="assets/img/gallery/vsaravananco.png"
+              src={`${process.env.PUBLIC_URL}/assets/img/gallery/vsaravananco.png`}
               className="img-fluid"
               alt=""
             />
@@ -131,7 +131,7 @@ function Home(){
         <div className="col-xl-3 col-lg-4 col-md-6">
           <div className="gallery-item h-100">
             <img
-              src="assets/img/gallery/jeyarcottage.png"
+              src={`${process.env.PUBLIC_URL}/assets/img/gallery/jeyarcottage.png`}
               className="img-fluid"
               alt=""
             />
@@ -148,7 +148,7 @@ function Home(){
         <div className="col-xl-3 col-lg-4 col-md-6">
           <div className="gallery-item h-100">
             <img
-              src="assets/img/gallery/greentrends.png"
+              src={`${process.env.PUBLIC_URL}/assets/img/gallery/greentrends.png`}
               className="img-fluid"
               alt=""
             />
@@ -165,7 +165,7 @@ function Home(){
         <div className="col-xl-3 col-lg-4 col-md-6">
           <div className="gallery-item h-100">
             <img
-              src="assets/img/gallery/duraiwheels.png"
+              src={`${process.env.PUBLIC_URL}/assets/img/gallery/duraiwheels.png`}
               className="img-fluid"
               alt=""
             />
@@ -182,7 +182,7 @@ function Home(){
         <div className="col-xl-3 col-lg-4 col-md-6">
           <div className="gallery-item h-100">
             <img
-              src="assets/img/gallery/jdmemorialtrust.png"
+              src={`${process.env.PUBLIC_URL}/assets/img/gallery/jdmemorialtrust.png`}
               className="img-fluid"
               alt=""
             />
@@ -198,7 +198,7 @@ function Home(){
         <div className="col-xl-3 col-lg-4 col-md-6">
           <div className="gallery-item h-100">
             <img
-              src="assets/img/gallery/thorsden.png"
+              src={`${process.env.PUBLIC_URL}/assets/img/gallery/thorsden.png`}
               className="img-fluid"
               alt=""
             />
@@ -214,7 +214,7 @@ function Home(){
         <div className="col-xl-3 col-lg-4 col-md-6">
           <div className="gallery-item h-100">
             <img
-              src="assets/img/gallery/studio11.png"
+              src={`${process.env.PUBLIC_URL}/assets/img/gallery/studio11.png`}
               className="img-fluid"
               alt=""
             />
@@ -244,7 +244,7 @@ function Home(){
         <div className="col-xl-3 col-lg-4 col-md-6">
           <div className="gallery-item h-100">
             <img
-              src="assets/img/gallery/digitalkurinji.jpg"
+              src={`${process.env.PUBLIC_URL}/assets/img/gallery/digitalkurinji.jpg`}
               className="img-fluid"
               alt=""
             />
@@ -262,7 +262,7 @@ function Home(){
         <div className="col-xl-3 col-lg-4 col-md-6">
           <div className="gallery-item h-100">
             <img
-              src="assets/img/gallery/digitalculture.jpg"
+              src={`${process.env.PUBLIC_URL}/assets/img/gallery/digitalculture.jpg`}
               className="img-fluid"
               alt=""
             />
@@ -278,7 +278,7 @@ function Home(){
         <div className="col-xl-3 col-lg-4 col-md-6">
           <div className="gallery-item ">
             <img
-              src="assets/img/gallery/digitalstudio11.jpg"
+              src={`${process.env.PUBLIC_URL}/assets/img/gallery/digitalstudio11.jpg`}
               className="img-fluid"
               alt=""
             />
@@ -294,7 +294,7 @@ function Home(){
         <div className="col-xl-3 col-lg-4 col-md-6">
           <div className="gallery-item h-100">
             <img
-              src="assets/img/gallery/digitalvoltas.jpg"
+              src={`${process.env.PUBLIC_URL}/assets/img/gallery/digitalvoltas.jpg`}
               className="img-fluid"
               alt=""
             />
@@ -310,7 +310,7 @@ function Home(){
         <div className="col-xl-3 col-lg-4 col-md-6">
           <div className="gallery-item h-100">
             <img
-              src="assets/img/gallery/digitaljeyarcottage.jpg"
+              src={`${process.env.PUBLIC_URL}/assets/img/gallery/digitaljeyarcottage.jpg`}
               className="img-fluid"
               alt=""
             />
@@ -326,7 +326,7 @@ function Home(){
         <div className="col-xl-3 col-lg-4 col-md-6">
           <div className="gallery-item h-100">
             <img
-              src="assets/img/gallery/digitalduraiwheels.jpg"
+              src={`${process.env.PUBLIC_URL}/assets/img/gallery/digitalduraiwheels.jpg`}
               className="img-fluid"
               alt=""
             />
@@ -342,7 +342,7 @@ function Home(){
         <div className="col-xl-3 col-lg-4 col-md-6">
           <div className="gallery-item h-100">
             <img
-              src="assets/img/gallery/digitalgreentrends.jpg"
+              src={`${process.env.PUBLIC_URL}/assets/img/gallery/digitalgreentrends.jpg`}
               className="img-fluid"
               alt=""
             />
