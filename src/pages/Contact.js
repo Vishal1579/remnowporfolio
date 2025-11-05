@@ -13,7 +13,7 @@ function Contact() {
     e.preventDefault(); // Prevent the form from reloading the page
 
     try {
-      const response = await axios.post('http://localhost:5000/submit-form', {
+      const response = await axios.post('/submit-form', {
         name,
         email,
         subject,

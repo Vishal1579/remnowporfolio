@@ -1,21 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import { useParams } from 'react-router-dom';
+import { digitalMarketingDetails } from '../data/digitalMarketing';
 
 function Gallerydigital() {
   const { id } = useParams();
-  const [data, setData] = useState(null);
-
-  useEffect(() => {
-    fetch(`http://localhost:3001/digitalmarketing/${id}`)
-      .then(res => res.json())
-      .then(data => setData(data))
-      .catch(err => console.error('Error fetching data:', err));
-  }, [id]);
+  // Convert string ID to number for lookup
+  const data = digitalMarketingDetails[parseInt(id)] || null;
 
   const galleryImages = [
     data?.imagename1,
@@ -37,7 +32,7 @@ function Gallerydigital() {
                     {data ? (
     <h1>{data.headingname}</h1>
   ) : (
-    <p>Loading...</p>
+    <p>Project not found</p>
   )}
                   <p className="mb-0">
                     {data && data.headerdescription}
@@ -63,23 +58,25 @@ function Gallerydigital() {
         <section id="gallery-details" className="gallery-details section">
           <div className="container" data-aos="fade-up">
 
-            <Swiper
-              modules={[Navigation, Pagination, Autoplay]}
-              loop={true}
-              speed={600}
-              autoplay={{ delay: 5000 }}
-              slidesPerView="auto"
-              navigation
-              pagination={{ clickable: true }}
-              className="portfolio-details-slider"
-            >
-              {galleryImages.map((img, index) => (
-                <SwiperSlide key={index} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-                  <img className='swiperimagescssdigital'
-  src={`/assets/img/gallery/${img}`} alt={`Gallery ${index + 1}`} />
-                </SwiperSlide>
-              ))}
-            </Swiper>
+            {galleryImages.length > 0 && (
+              <Swiper
+                modules={[Navigation, Pagination, Autoplay]}
+                loop={galleryImages.length > 1}
+                speed={600}
+                autoplay={{ delay: 5000 }}
+                slidesPerView="auto"
+                navigation
+                pagination={{ clickable: true }}
+                className="portfolio-details-slider"
+              >
+                {galleryImages.map((img, index) => (
+                  <SwiperSlide key={index} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+                    <img className='swiperimagescssdigital'
+      src={`/assets/img/gallery/${img}`} alt={`Gallery ${index + 1}`} />
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            )}
 
             <div className="row justify-content-between gy-4 mt-4">
               <div className="col-lg-8" data-aos="fade-up">

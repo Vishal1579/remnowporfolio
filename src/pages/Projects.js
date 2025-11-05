@@ -5,7 +5,7 @@ function Projects() {
   const [projects, setProjects] = useState([]);
 
   useEffect(() => {
-    axios.get('http://localhost:5000/projects')
+    axios.get('/projects')
       .then(res => setProjects(res.data))
       .catch(err => console.error(err));
   }, []);
